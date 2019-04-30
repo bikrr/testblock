@@ -7,7 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <head>
-        <title>testblock client</title>
+        <title>TestBlock client</title>
     </head>
     <body>
         <script src="../js/script.js"></script>
