@@ -16,13 +16,13 @@
             <div class="animated fadeIn delay-1s">
                       <h1 class="h3 mb-3 font-weight-normal">TestBlock test</h1>
                       <label for="ajaxgetsoapresposeinput" class="sr-only">Input user name</label>
-                      <input type="text" id="ajaxgetsoapresposeinput" class="form-control mb-3" placeholder="User name">
+                      <!-- <input type="text" id="ajaxgetsoapresposeinput" class="form-control mb-3" placeholder="User name">
                       <label for="ajaxsetsoapadressinput" class="sr-only">Input wsdl adress</label>
                       <input type="text" id="ajaxsetsoapadressinput" value="http://localhost:8080/service/studentDetailsWsdl.wsdl" class="form-control mb-3" placeholder="WSDL adress">
-                      <button id="ajaxgetsoapresposebutton" class="btn btn-info mb-3">Get active directory users</button>
-                      <input type="text" id="soapresponsename" class="form-control mb-3" placeholder="Student name">
-                      <input type="text" id="soapresponsestandard" class="form-control mb-3" placeholder="Student standard">
-                      <input type="text" id="soapresponseadress" class="form-control mb-3" placeholder="Student adress">
+                      <button id="ajaxgetsoapresposebutton" class="btn btn-info mb-3">Get active directory users</button> -->
+                      <input type="text" id="soapresponsename" class="form-control mb-3" placeholder="Name">
+                      <input type="text" id="soapresponsestandard" class="form-control mb-3" placeholder="Type">
+                      <input type="text" id="soapresponseadress" class="form-control mb-3" placeholder="Address">
                       <p class ="mt-1" id="returnsoap"></p>
 
 
