@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bce61207-7c82-4a4b-bbbc-b73b49038605" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -177,7 +176,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557132086796" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557173298453" />
     <property name="last_opened_file_path" value="D:/testvs" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
@@ -288,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557122360011</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changed input tag">
+      <created>1557132110160</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1557132110160</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -327,7 +333,8 @@
     <MESSAGE value="changed return" />
     <MESSAGE value="changed return again" />
     <MESSAGE value="changed spaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed spaces" />
+    <MESSAGE value="changed input tag" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed input tag" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/webapp/AjaxSoapController.java" />
