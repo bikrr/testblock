@@ -1,6 +1,53 @@
     var inputsoaprequest;
     var wsdladressfield;
 
+
+$(document).ready(function() {
+        $("#ajaxstartbuttonid").click(function(){
+        $('#spinner').show();
+                var registerData = $('#commandtextinput').val();
+                        $.ajax({
+                                url: '/commandStartStopAjax',
+                                type: 'POST',
+                                data: {ajaxcommand: registerData},
+                                success: function(data){
+                                   //     alert(data);
+                                        $('#spinner').hide();
+                                        $('#soapresponsename').val(data);
+                                        $('#soapresponsestandard').val(data);
+                                        $('#soapresponseadress').val(data);
+                                }
+                });
+        });
+
+
+});
+
+
+
+$(document).ready(function() {
+        $("#ajaxstartbuttonid2").click(function(){
+        $('#spinner').show();
+                var registerData = $('#commandtextinput2').val();
+                        $.ajax({
+                                url: '/commandStartStopAjax2',
+                                type: 'POST',
+                                data: {ajaxcommand: registerData},
+                                success: function(data){
+                                   //     alert(data);
+                                        $('#spinner').hide();
+                                        $('#soapresponsename').val(data);
+                                        $('#soapresponsestandard').val(data);
+                                        $('#soapresponseadress').val(data);
+                                }
+                });
+        });
+
+
+});
+
+
+
     $(document).ready(function() {
         $("#ajaxgetsoapresposebutton").click(function(){
             ajaxsendfunction($('#ajaxgetsoapresposeinput').val(), $('#ajaxsetsoapadressinput').val());
