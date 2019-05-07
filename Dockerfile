@@ -1,4 +1,5 @@
 FROM openjdk:7
+VOLUME /tmp/
 RUN ls
 WORKDIR /tmp
 RUN ls
