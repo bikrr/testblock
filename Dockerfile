@@ -1,2 +1,2 @@
-FROM mcr.microsoft.com/java/jdk:tag
+FROM FROM openjdk:7
 USER root
