@@ -1,6 +1,29 @@
     var inputsoaprequest;
     var wsdladressfield;
 
+// JDBC connect verify
+
+$(document).ready(function() {
+        $("#dbconnectcerify").click(function(){
+        $('#spinner').show();
+                var registerData = $('#commandtextinput').val();
+                        $.ajax({
+                                url: '/commandJDBCconnect',
+                                type: 'POST',
+                                data: {ajaxcommand: registerData},
+                                success: function(data){
+                                   //     alert(data);
+                                        $('#spinner').hide();
+                                        $('#soapresponsename').val(data);
+                                        $('#soapresponsestandard').val(data);
+                                        $('#soapresponseadress').val(data);
+                                }
+                });
+        });
+
+
+});
+
 
 $(document).ready(function() {
         $("#ajaxstartbuttonid").click(function(){

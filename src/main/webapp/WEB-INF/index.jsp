@@ -25,9 +25,9 @@
                       <input type="text" id="soapresponseadress" class="form-control mb-3" placeholder="Address">
                       <p class ="mt-1" id="returnsoap"></p>
 
-
+                      <button id="dbconnectcerify" class="btn btn-info mb-3">JDBC connect</button>
                       <button id="ajaxstartbuttonid" class="btn btn-info mb-3">get users</button>
-                      <button id="ajaxstartbuttonid2" class="btn btn-info mb-3">get users</button>
+                      <button id="ajaxstartbuttonid2" class="btn btn-info mb-3">get users 2</button>
                       <input type="text" id="commandtextinput" value="hello" class="d-none">
             </div>
           </div>

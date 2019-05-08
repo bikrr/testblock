@@ -1,3 +1,4 @@
 main\webapp\IndexController.class
 main\webapp\WebConfig.class
+main\webapp\JDBCPostgreSQL.class
 main\webapp\DataController.class
