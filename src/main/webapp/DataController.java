@@ -15,7 +15,7 @@ public class DataController {
     @ResponseBody
     public String getCommandAjax(@RequestParam(value = "ajaxcommand", required = false) String commandtext) throws IOException {
 
-        return "hello 1";
+        return "riemann: password";
     }
 
 
@@ -23,7 +23,7 @@ public class DataController {
     @ResponseBody
     public String getCommandAjax2(@RequestParam(value = "ajaxcommand2", required = false) String commandtext2) throws IOException {
 
-        return "hello 2";
+        return "gauss: password";
     }
 
 

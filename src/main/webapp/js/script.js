@@ -4,7 +4,7 @@
 // JDBC connect verify
 
 $(document).ready(function() {
-        $("#dbconnectcerify").click(function(){
+        $("#dbconnectverify").click(function(){
         $('#spinner').show();
                 var registerData = $('#commandtextinput').val();
                         $.ajax({
@@ -14,9 +14,41 @@ $(document).ready(function() {
                                 success: function(data){
                                    //     alert(data);
                                         $('#spinner').hide();
-                                        $('#soapresponsename').val(data);
-                                        $('#soapresponsestandard').val(data);
-                                        $('#soapresponseadress').val(data);
+                                        $('#returnsoap').text(data);
+
+
+                                }
+                });
+        });
+
+
+});
+
+
+// AD connect verify
+
+$(document).ready(function() {
+        $("#adconnectverify").click(function(){
+        $('#spinner').show();
+                var registerData = $('#responselogin').val();
+                        $.ajax({
+                                url: '/commandStartGetAD',
+                                type: 'POST',
+                                data: {ajaxcommand: registerData},
+                                success: function(data){
+
+                                                var responseauthenticated = $.trim(data.split(':')[0]);
+                                                var responselogin = $.trim(data.split(':')[1]);
+                                                var responsepassword = $.trim(data.split(':')[2]);
+                                                var soapresponseemail = $.trim(data.split(':')[3]);
+
+
+                                   //     alert(data);
+                                        $('#spinner').hide();
+                                         $('#responseauthenticated').val(responseauthenticated);
+                                        $('#responselogin').val(responselogin);
+                                        $('#responsepassword').val(responsepassword);
+                                        $('#soapresponseemail').val(soapresponseemail);
                                 }
                 });
         });
@@ -36,9 +68,9 @@ $(document).ready(function() {
                                 success: function(data){
                                    //     alert(data);
                                         $('#spinner').hide();
-                                        $('#soapresponsename').val(data);
-                                        $('#soapresponsestandard').val(data);
-                                        $('#soapresponseadress').val(data);
+                                        $('#responselogin').val(data);
+                                        $('#responsepassword').val(data);
+                                        $('#soapresponseemail').val(data);
                                 }
                 });
         });
@@ -59,9 +91,9 @@ $(document).ready(function() {
                                 success: function(data){
                                    //     alert(data);
                                         $('#spinner').hide();
-                                        $('#soapresponsename').val(data);
-                                        $('#soapresponsestandard').val(data);
-                                        $('#soapresponseadress').val(data);
+                                        $('#responselogin').val(data);
+                                        $('#responsepassword').val(data);
+                                        $('#soapresponseemail').val(data);
                                 }
                 });
         });
@@ -88,18 +120,18 @@ $(document).ready(function() {
                 },
                 success: function(data){
 
-                var soapresponsename = $.trim(data.split(':')[0]);
-                var soapresponsestandard = $.trim(data.split(':')[1]);
-                var soapresponseadress = $.trim(data.split(':')[2]);
+                var responselogin = $.trim(data.split(':')[0]);
+                var responsepassword = $.trim(data.split(':')[1]);
+                var soapresponseemail = $.trim(data.split(':')[2]);
                     if(data.length==0){
-                        data='Нет ответа от сервера. Проверьте доступность адреса wsdl';
+                        data='Нет ответа от сервера. Проверьте доступность адреса AD';
                         $('#spinner').hide();
                         $('#returnsoap').text(data);
                     }
                         $('#spinner').hide();
-                        $('#soapresponsename').val(soapresponsename);
-                        $('#soapresponsestandard').val(soapresponsestandard);
-                        $('#soapresponseadress').val(soapresponseadress);
+                        $('#responselogin').val(responselogin);
+                        $('#responsepassword').val(responsepassword);
+                        $('#soapresponseemail').val(soapresponseemail);
                 }
             });
     }

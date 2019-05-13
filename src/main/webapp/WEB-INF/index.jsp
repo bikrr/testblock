@@ -20,19 +20,25 @@
                       <label for="ajaxsetsoapadressinput" class="sr-only">Input wsdl adress</label>
                       <input type="text" id="ajaxsetsoapadressinput" value="http://localhost:8080/service/studentDetailsWsdl.wsdl" class="form-control mb-3" placeholder="WSDL adress">
                       <button id="ajaxgetsoapresposebutton" class="btn btn-info mb-3">Get active directory users</button> -->
-                      <input type="text" id="soapresponsename" class="form-control mb-3" placeholder="Name">
-                      <input type="text" id="soapresponsestandard" class="form-control mb-3" placeholder="Type">
-                      <input type="text" id="soapresponseadress" class="form-control mb-3" placeholder="Address">
-                      <p class ="mt-1" id="returnsoap"></p>
 
-                      <button id="dbconnectcerify" class="btn btn-info mb-3">JDBC connect</button>
+                      Login <input type="text" id="responselogin" class="form-control mb-3" placeholder="Login">
+                      Password <input type="text" id="responsepassword" class="form-control mb-3" placeholder="Password">
+
+
+
+                      <button id="dbconnectverify" class="btn btn-info mb-3">JDBC connect</button>
+                      <button id="adconnectverify" class="btn btn-info mb-3">AD connect</button>
                       <button id="ajaxstartbuttonid" class="btn btn-info mb-3">get users</button>
                       <button id="ajaxstartbuttonid2" class="btn btn-info mb-3">get users 2</button>
                       <input type="text" id="commandtextinput" value="hello" class="d-none">
+    <p class ="mt-1" id="returnsoap"></p>
+                       Authenticated <input type="text" id="responseauthenticated" class="form-control mb-3" placeholder="Authenticated">
+                       E-mail <input type="text" id="soapresponseemail" class="form-control mb-3" placeholder="E-mail">
+
             </div>
           </div>
 
-          <div id="spinner" class="spinner" style="display: none; position: fixed; top: 50%; left: 50%;"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i></div>
+          <div id="spinner" class="spinner" style="display: none; position: fixed; top: 65%; left: 50%;"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i></div>
 
     </body>
 </html>
