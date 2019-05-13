@@ -19,7 +19,7 @@ public class JDBCPostgreSQL {
     //  Database credentials
     static final String DB_URL = "jdbc:postgresql://127.0.0.1:5432/testblock";
     static final String USER = "postgres";
-    static final String PASS = "postgres";
+    static final String PASS = "2I2anyquery";
 
 
     @RequestMapping(value = "/commandJDBCconnect", method = RequestMethod.POST)
