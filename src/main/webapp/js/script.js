@@ -1,6 +1,67 @@
     var inputsoaprequest;
     var wsdladressfield;
 
+// JDBC connect verify
+
+$(document).ready(function() {
+        $("#dbconnectverify").click(function(){
+        $('#spinner').show();
+        $('#returnsoap').text("please wait...");
+                var registerData = $('#commandtextinput').val();
+                        $.ajax({
+                                url: '/commandJDBCconnect',
+                                type: 'POST',
+                                data: {ajaxcommand: registerData},
+                                success: function(data){
+                                   //     alert(data);
+                                        $('#spinner').hide();
+                                        $('#returnsoap').text(data);
+
+
+                                }
+                });
+        });
+
+
+});
+
+
+// AD connect verify
+
+$(document).ready(function() {
+        $("#adconnectverify").click(function(){
+        $('#spinner').show();
+                var registerData = $('#responselogin').val();
+                        $.ajax({
+                                url: '/commandStartGetAD',
+                                type: 'POST',
+                                data: {ajaxcommand: registerData},
+                                success: function(data){
+                               $('#returnsoap').text("");
+                                                       if(data.includes("error")){
+                                                                         data='[LDAP error code 49 - Invalid Credentials]';
+                                                                         $('#spinner').hide();
+                                                                         $('#returnsoap').text(data);
+                                                                     }
+                                                var responseauthenticated = $.trim(data.split(':')[0]);
+                                                var responselogin = $.trim(data.split(':')[1]);
+                                                var responsepassword = $.trim(data.split(':')[2]);
+                                                var soapresponseemail = $.trim(data.split(':')[3]);
+
+
+                                   //     alert(data);
+                                        $('#spinner').hide();
+                                         $('#responseauthenticated').val(responseauthenticated);
+                                        $('#responselogin').val(responselogin);
+                                        $('#responsepassword').val(responsepassword);
+                                        $('#soapresponseemail').val(soapresponseemail);
+                                }
+                });
+        });
+
+
+});
+
 
 $(document).ready(function() {
         $("#ajaxstartbuttonid").click(function(){
@@ -12,10 +73,11 @@ $(document).ready(function() {
                                 data: {ajaxcommand: registerData},
                                 success: function(data){
                                    //     alert(data);
+                                      $('#returnsoap').text("");
                                         $('#spinner').hide();
-                                        $('#soapresponsename').val(data);
-                                        $('#soapresponsestandard').val(data);
-                                        $('#soapresponseadress').val(data);
+                                        $('#responselogin').val(data);
+                                        $('#responsepassword').val(data);
+                                        $('#soapresponseemail').val(data);
                                 }
                 });
         });
@@ -35,10 +97,11 @@ $(document).ready(function() {
                                 data: {ajaxcommand: registerData},
                                 success: function(data){
                                    //     alert(data);
+                                        $('#returnsoap').text(" ");
                                         $('#spinner').hide();
-                                        $('#soapresponsename').val(data);
-                                        $('#soapresponsestandard').val(data);
-                                        $('#soapresponseadress').val(data);
+                                        $('#responselogin').val(data);
+                                        $('#responsepassword').val(data);
+                                        $('#soapresponseemail').val(data);
                                 }
                 });
         });
@@ -65,18 +128,18 @@ $(document).ready(function() {
                 },
                 success: function(data){
 
-                var soapresponsename = $.trim(data.split(':')[0]);
-                var soapresponsestandard = $.trim(data.split(':')[1]);
-                var soapresponseadress = $.trim(data.split(':')[2]);
+                var responselogin = $.trim(data.split(':')[0]);
+                var responsepassword = $.trim(data.split(':')[1]);
+                var soapresponseemail = $.trim(data.split(':')[2]);
                     if(data.length==0){
-                        data='Нет ответа от сервера. Проверьте доступность адреса wsdl';
+                        data='Нет ответа от сервера. Проверьте доступность адреса AD';
                         $('#spinner').hide();
                         $('#returnsoap').text(data);
                     }
                         $('#spinner').hide();
-                        $('#soapresponsename').val(soapresponsename);
-                        $('#soapresponsestandard').val(soapresponsestandard);
-                        $('#soapresponseadress').val(soapresponseadress);
+                        $('#responselogin').val(responselogin);
+                        $('#responsepassword').val(responsepassword);
+                        $('#soapresponseemail').val(soapresponseemail);
                 }
             });
     }
