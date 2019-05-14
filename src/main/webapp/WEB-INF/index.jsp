@@ -32,7 +32,7 @@
                       <button id="ajaxstartbuttonid2" class="btn btn-info mb-3">get users 2</button>
                       <input type="text" id="commandtextinput" value="hello" class="d-none">
     <p class ="mt-1" id="returnsoap"></p>
-                       Authenticated <input type="text" id="responseauthenticated" class="form-control mb-3" placeholder="Authenticated">
+                       CN <input type="text" id="responseauthenticated" class="form-control mb-3" placeholder="Authenticated">
                        E-mail <input type="text" id="soapresponseemail" class="form-control mb-3" placeholder="E-mail">
 
             </div>

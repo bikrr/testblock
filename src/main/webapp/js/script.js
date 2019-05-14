@@ -51,10 +51,10 @@ $(document).ready(function() {
 
                                    //     alert(data);
                                         $('#spinner').hide();
-                                         $('#responseauthenticated').val(responseauthenticated);
-                                        $('#responselogin').val(responselogin);
-                                        $('#responsepassword').val(responsepassword);
+                                        $('#responseauthenticated').val(responseauthenticated);
                                         $('#soapresponseemail').val(soapresponseemail);
+
+
                                 }
                 });
         });
@@ -73,11 +73,19 @@ $(document).ready(function() {
                                 data: {ajaxcommand: registerData},
                                 success: function(data){
                                    //     alert(data);
+
+
+                                   var responselogin = $.trim(data.split(':')[0]);
+                                   var responsepassword = $.trim(data.split(':')[1]);
+
+
+
                                       $('#returnsoap').text("");
                                         $('#spinner').hide();
-                                        $('#responselogin').val(data);
-                                        $('#responsepassword').val(data);
-                                        $('#soapresponseemail').val(data);
+                                        $('#responselogin').val(responselogin);
+                                        $('#responsepassword').val(responsepassword);
+                                            $('#responseauthenticated').val(" ");
+                                          $('#soapresponseemail').val(" ");
                                 }
                 });
         });
@@ -101,7 +109,8 @@ $(document).ready(function() {
                                         $('#spinner').hide();
                                         $('#responselogin').val(data);
                                         $('#responsepassword').val(data);
-                                        $('#soapresponseemail').val(data);
+                                        $('#responseauthenticated').val(" ");
+                                        $('#soapresponseemail').val(" ");
                                 }
                 });
         });
