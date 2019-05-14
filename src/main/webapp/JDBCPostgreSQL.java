@@ -18,8 +18,8 @@ public class JDBCPostgreSQL {
 
     //  Database credentials
 
-      static final String DB_URL = "jdbc:postgresql://192.168.19.129:5432/testblock";
-  //  static final String DB_URL = "jdbc:postgresql://192.168.188.130:5432/testblock";
+    //    static final String DB_URL = "jdbc:postgresql://192.168.19.129:5432/testblock";
+   static final String DB_URL = "jdbc:postgresql://192.168.188.130:5432/testblock";
 
     static final String USER = "postgres";
     static final String PASS = "2I2anyquery";
