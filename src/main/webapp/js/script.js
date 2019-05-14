@@ -84,8 +84,8 @@ $(document).ready(function() {
                                         $('#spinner').hide();
                                         $('#responselogin').val(responselogin);
                                         $('#responsepassword').val(responsepassword);
-                                            $('#responseauthenticated').val(" ");
-                                          $('#soapresponseemail').val(" ");
+                                            $('#responseauthenticated').val("");
+                                          $('#soapresponseemail').val("");
                                 }
                 });
         });
