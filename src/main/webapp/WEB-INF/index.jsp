@@ -27,7 +27,7 @@
 
 
                       <button id="dbconnectverify" class="btn btn-info mb-3">JDBC connect</button>
-                      <button id="adconnectverify" class="btn btn-info mb-3">AD connect</button>
+                      <button id="adconnectverify" class="btn btn-info mb-3">AD search</button>
                       <button id="ajaxstartbuttonid" class="btn btn-info mb-3">get users</button>
                       <button id="ajaxstartbuttonid2" class="btn btn-info mb-3">get users 2</button>
                       <input type="text" id="commandtextinput" value="hello" class="d-none">

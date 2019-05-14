@@ -6,6 +6,7 @@
 $(document).ready(function() {
         $("#dbconnectverify").click(function(){
         $('#spinner').show();
+        $('#returnsoap').text("please wait...");
                 var registerData = $('#commandtextinput').val();
                         $.ajax({
                                 url: '/commandJDBCconnect',
@@ -36,7 +37,12 @@ $(document).ready(function() {
                                 type: 'POST',
                                 data: {ajaxcommand: registerData},
                                 success: function(data){
-
+                               $('#returnsoap').text("");
+                                                       if(data.includes("error")){
+                                                                         data='[LDAP error code 49 - Invalid Credentials]';
+                                                                         $('#spinner').hide();
+                                                                         $('#returnsoap').text(data);
+                                                                     }
                                                 var responseauthenticated = $.trim(data.split(':')[0]);
                                                 var responselogin = $.trim(data.split(':')[1]);
                                                 var responsepassword = $.trim(data.split(':')[2]);
@@ -67,6 +73,7 @@ $(document).ready(function() {
                                 data: {ajaxcommand: registerData},
                                 success: function(data){
                                    //     alert(data);
+                                      $('#returnsoap').text("");
                                         $('#spinner').hide();
                                         $('#responselogin').val(data);
                                         $('#responsepassword').val(data);
@@ -90,6 +97,7 @@ $(document).ready(function() {
                                 data: {ajaxcommand: registerData},
                                 success: function(data){
                                    //     alert(data);
+                                        $('#returnsoap').text(" ");
                                         $('#spinner').hide();
                                         $('#responselogin').val(data);
                                         $('#responsepassword').val(data);
