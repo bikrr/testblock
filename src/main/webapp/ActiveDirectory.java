@@ -11,6 +11,7 @@ import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;
 import javax.naming.directory.*;
 import java.util.Hashtable;
+
 @Controller
 public class ActiveDirectory {
 
@@ -19,19 +20,16 @@ public class ActiveDirectory {
 
     @RequestMapping(value = "/commandStartGetAD", method = RequestMethod.POST)
     @ResponseBody
-    public static String getUsers(@RequestParam(value = "ajaxcommand", required = false) String commandtext)
-    {
+    public static String getUsers(@RequestParam(value = "ajaxcommand", required = false) String commandtext) {
         System.out.println(commandtext);
         return verifyUser(commandtext, "password");
-     //   verifyUser("gauss", "password");
+        //   verifyUser("gauss", "password");
 
     }
 
-    public static String verifyUser(String userName, String password)
-    {
+    public static String verifyUser(String userName, String password) {
         DirContext ctx = null;
-        try
-        {
+        try {
             // creating environment for initial context
             Hashtable<String, String> env = new Hashtable<String, String>();
             env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
@@ -47,33 +45,30 @@ public class ActiveDirectory {
             // get more attributes about this user
             SearchControls scs = new SearchControls();
             scs.setSearchScope(SearchControls.SUBTREE_SCOPE);
-            String[] attrNames = { "mail", "cn" };
+            String[] attrNames = {"mail", "cn"};
             scs.setReturningAttributes(attrNames);
 
             NamingEnumeration nes = ctx.search(USER_CONTEXT, "uid=" + userName, scs);
-            if(nes.hasMore()) {
+            if (nes.hasMore()) {
                 Attributes attrs = ((SearchResult) nes.next()).getAttributes();
                 System.out.println("mail: " + attrs.get("mail").get());
                 System.out.println("cn: " + attrs.get("cn").get());
-                return attrs.get("cn").get()+ ":" + ":" + ":"+ attrs.get("mail").get();
+                return attrs.get("cn").get() + ":" + ":" + ":" + attrs.get("mail").get();
             }
-        }
-        catch (NamingException e)
-        {
+        } catch (NamingException e) {
             e.printStackTrace();
             return e.toString();
 
-        }
-        finally
-        {
+        } finally {
             if (ctx != null)
                 try {
                     ctx.close();
-                } catch (NamingException ex) {}
+                } catch (NamingException ex) {
+                }
 
 
         }
-      return "test AD";
+        return "test AD";
     }
 
 }

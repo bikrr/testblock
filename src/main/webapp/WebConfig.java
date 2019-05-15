@@ -21,6 +21,7 @@ import java.util.Properties;
 @SpringBootApplication
 public class WebConfig {
     static String DB_URL, DB_USER, DB_PASS;
+
     public static void main(String[] args) throws IOException {
         SpringApplication.run(WebConfig.class, args);
 
@@ -28,10 +29,10 @@ public class WebConfig {
         File propertyFile;
         Properties properties = new Properties();
         propertyFile = new File("src/main/resources/application.properties");
-       properties.load(new FileReader(propertyFile));
+        properties.load(new FileReader(propertyFile));
         DB_URL = properties.getProperty("DB_URL");
         DB_USER = properties.getProperty("DB_USER");
         DB_PASS = properties.getProperty("DB_PASS");
-        System.out.println("DB_URL:" +DB_URL);
+        System.out.println("DB_URL:" + DB_URL);
     }
 }

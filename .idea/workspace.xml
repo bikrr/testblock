@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bce61207-7c82-4a4b-bbbc-b73b49038605" name="Default Changelist" comment="changed input tag">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/testblock.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/testblock.iml" afterDir="false" />
+    <list default="true" id="bce61207-7c82-4a4b-bbbc-b73b49038605" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/JDBCPostgreSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JDBCPostgreSQL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/webapp/WebConfig.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -240,7 +232,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557905375354" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557906156147" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../testblock_tests" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
@@ -524,14 +516,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557838945091</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="changed application.properties&#10;DB parameters">
+      <created>1557905889122</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1557905889122</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1651" y="164" width="1596" height="834" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16927083" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16927083" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -540,7 +539,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31196582" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31196582" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3988604" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -564,7 +563,8 @@
     <MESSAGE value="changed return again" />
     <MESSAGE value="changed spaces" />
     <MESSAGE value="changed input tag" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed input tag" />
+    <MESSAGE value="changed application.properties&#10;DB parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed application.properties&#10;DB parameters" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/webapp/AjaxSoapController.java" />
