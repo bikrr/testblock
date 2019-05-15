@@ -1,7 +1,7 @@
 package main.webapp;
 
 
-//STEP 1. Import required packages
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,16 +13,16 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 
+
+
 @Controller
 public class JDBCPostgreSQL {
 
     //  Database credentials
 
-      static final String DB_URL = "jdbc:postgresql://192.168.19.129:5432/testblock";
+   //   static final String DB_URL = "jdbc:postgresql://192.168.19.129:5432/testblock";
   //  static final String DB_URL = "jdbc:postgresql://192.168.188.130:5432/testblock";
 
-    static final String USER = "postgres";
-    static final String PASS = "2I2anyquery";
 
 
     @RequestMapping(value = "/commandJDBCconnect", method = RequestMethod.POST)
@@ -44,7 +44,7 @@ public class JDBCPostgreSQL {
 
         try {
             connection = DriverManager
-                    .getConnection(DB_URL, USER, PASS);
+                    .getConnection(WebConfig.DB_URL, WebConfig.DB_USER, WebConfig.DB_PASS);
 
         } catch (SQLException e) {
             System.out.println("Connection Failed");
